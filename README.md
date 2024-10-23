@@ -1,13 +1,36 @@
-This repository contains the code and documentation for the Synchronized Security System (SSS). The system integrates various security components like cameras, motion detectors, smoke detectors, and fingerprint sensors to create a robust and synchronized security solution. The system is controlled through an Android application, leveraging machine learning for face recognition and sensor data processing.
+# Synchronized Security System (SSS)
 
-Features:
+## Overview
+The Synchronized Security System (SSS) is an IoT-based project designed to provide enhanced security for residential and commercial premises. This project integrates multiple sensors and devices into a centralized system, providing real-time monitoring, detection, and alerts via an Android app.
 
---> Electronic Security Devices: Includes motion detectors, door and window security modules, and smoke detectors.
+## Features
+- **Motion Detection**: Detects movement using PIR sensors and sends alerts to the system.
+- **Door Security**: Utilizes fingerprint scanners and cameras to verify identity. Failed attempts trigger a photo and send an email notification.
+- **Smoke Detection**: Monitors air quality and alerts users in case of fire hazards.
+- **Face Recognition**: Uses machine learning algorithms to detect and recognize faces in real-time via camera footage.
+- **Android App Integration**: Real-time data and alerts are available through an Android app connected to the cloud database.
 
---> Camera Integration: Utilizes both indoor and outdoor cameras with real-time face recognition.
+## Objectives
+1. Develop a security network using multiple sensors (motion, smoke, cameras, etc.).
+2. Implement machine learning algorithms for face and motion detection.
+3. Integrate with an Android app for real-time monitoring and alerts.
+4. Provide a user-friendly and efficient security solution.
 
---> Server-Client Interface: Synchronizes sensor data and visual input using a central hub (Raspberry Pi 4) and a cloud database (AWS RDS).
+## Hardware Requirements
+- Raspberry Pi 4 (8GB RAM)
+- PIR Motion Sensors
+- MQ2 Smoke Detector
+- Fingerprint Scanner
+- 1080p Cameras
+- Cooling Fan for Raspberry Pi
+- Necessary connectors/adapters
 
---> Android Application: Developed using Microsoft PowerApps for seamless access and control of the security system.
+## Software Requirements
+- Python (OpenCV, Machine Learning Libraries)
+- Microsoft PowerApps (for Android app)
+- Amazon Web Services (AWS) for cloud storage and database
 
---> Machine Learning: Real-time face recognition powered by OpenCV, using pre-trained models for reliable detection.
+## System Architecture
+1. **Central Hub**: The Raspberry Pi acts as the central hub, running all the sensor codes and synchronizing data with the cloud.
+2. **Sensors**: Devices like motion detectors, cameras, and fingerprint scanners send data to the Raspberry Pi for processing.
+3. **Android App**: Users can monitor security alerts and access data through the custom-built app.
